@@ -90,14 +90,14 @@ def guesserOne():
     while compGuess != userInput:
         # Runs till the guessed value is equal to user value /\
         if compGuess > userInput:
-        print("Attempt" + " " + str(count + 1) + ":" + str(float(compGuess)) + " = This is too high")
-        # Child Algorithm 2 \/
-        graphAndCountAndCompGuessUpdater(lowerBound, upperBound, compGuess)
-        # Shrinks the upper bound appropriately if computer guesses too high and updates some key values /\
-        upperBound = compGuess
-        compGuess = random.randint(lowerBound, upperBound)
+            print("Attempt" + " " + str(count + 1) + ":" + str(float(compGuess)) + " = This is too high")
+            # Child Algorithm 2 \/
+            graphAndCountAndCompGuessUpdater(lowerBound, upperBound, compGuess)
+            # Shrinks the upper bound appropriately if computer guesses too high and updates some key values /\
+            upperBound = compGuess
+            compGuess = random.randint(lowerBound, upperBound)
 
-        elif compGuess < userInput:
+        if compGuess < userInput:
             print("Attempt" + " " + str(count + 1) + ":" + str(float(compGuess)) + " = This is too low")
             # Child Algorithm 2 \/
             graphAndCountAndCompGuessUpdater(lowerBound, upperBound, compGuess)
